@@ -56,6 +56,7 @@ function getVueOptions (name) {
                 }
 
                 if(this.person.contact.phone) {
+                    console.log(this.person.contact.phone);
                     links.phone = `tel:${this.person.contact.phone}`;
                 }
 

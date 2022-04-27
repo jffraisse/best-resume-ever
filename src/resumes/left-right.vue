@@ -121,7 +121,7 @@ export default Vue.component(name, getVueOptions(name));
     border:1px solid black;
     text-transform:uppercase;
     padding:10px 20px;
-    margin-top:80px;
+    margin-top:50px;
     margin-bottom:5px;
     font-family:'Open Sans', sans-serif;
     font-size:35px;
@@ -138,8 +138,8 @@ export default Vue.component(name, getVueOptions(name));
   .image {
     width:100px;
     height:100px;
-    margin-top:50px;
-    margin-bottom:50px;
+    margin-top:25px;
+    margin-bottom:25px;
     .img {
       width:100%;
       height:100%;

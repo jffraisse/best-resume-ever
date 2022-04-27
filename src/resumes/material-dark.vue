@@ -82,11 +82,11 @@
       <div class="skill" v-for="skill in person.skills" :key="skill.name">
         <div class="right">
           <span>{{skill.name}}&nbsp;</span>
-          <div class="progress">
-            <div class="determinate" :style="'width: '+skill.level+'%;'">
-              <i class="fa fa-circle"></i>
-            </div>
-          </div>
+            <!-- <div class="progress">
+              <div class="determinate" :style="'width: '+skill.level+'%;'">
+                <i class="fa fa-circle"></i>
+              </div>
+            </div> -->
         </div>
       </div>
     </div>
@@ -116,21 +116,13 @@
       :href="experience.website">
         <div class="block-helper"></div>
         <h3 class="headline">{{experience.position}} - {{experience.company}}</h3>
-          <div class="subheadline">{{experience.timeperiod}}</div>
-          <p class="info">
+          <div class="subheadline">{{experience.timeperiod}}</div>  
+          <p class="info" v-if="experience.description">
             {{experience.description}}
           </p>  
-      </a>
-    </div>
-    <div class="section-headline">{{ lang.education }}</div>
-    <div class="block" v-for="education in person.education" :key="education.degree">
-      <a
-      :href="education.website">
-        <div class="block-helper"></div>
-        <div class="headline">{{education.degree}}</div>
-        <p class="info">
-          {{education.timeperiod}}, {{education.description}}
-        </p>
+          <ul class="info" v-if="experience.descriptions">
+            <li v-for="description in experience.descriptions"><p>{{description.content}}</p></li>
+          </ul>
       </a>
     </div>
   </div>
@@ -149,6 +141,9 @@ export default Vue.component(name, getVueOptions(name));
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="less" scoped>
+html {
+  background: red !important;
+}
 .resume {
   font-family:'Roboto' !important;
   background:#cccccc;
@@ -248,7 +243,7 @@ p {
   font-family:'Roboto', sans-serif;
   font-weight:300;
   font-size:10pt;
-  line-height:17pt;
+  line-height:15pt;
 }
 .m_box {
   box-shadow:0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
@@ -290,6 +285,14 @@ h4 {
   .experience {
     margin-top: 40px;
   }
+  .block.education {
+    .headline {
+      font-size: 14px; 
+    }
+    .info {
+      font-size: 12px; 
+    }
+  }
   .about {
     display: block;
     margin-top:8px !important;
@@ -322,7 +325,17 @@ h4 {
       font-size:14px;
       color:rgba(0,0,0,0.870588);
       margin-bottom:0;
-      padding-top:20px;
+      li {
+        padding: 0;
+        margin-left: 10px;
+        list-style-type: circle;
+      }
+      p {
+        margin-bottom: 0px;
+      }
+      + .info {
+        padding-top: 10px;
+      }
     }
     .icon {
       width:16%;
