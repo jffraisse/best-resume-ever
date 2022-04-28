@@ -13,6 +13,8 @@
     "docs:serve": "cd docs/ && ws --port 8080 --rewrite '/best-resume-ever/* -> /$1'",
     "dev": "node build/dev-server.js",
     "start": "node build/dev-server.js",
+    "start:fr": "NODE_ENV=fr node build/dev-server.js",
+    "start:en": "NODE_ENV=en node build/dev-server.js",
     "pdf": "node scripts/export.js",
     "preview": "node scripts/preview.js",
     "test:deleteFiles": "node test/scripts/deleteFiles.js",
