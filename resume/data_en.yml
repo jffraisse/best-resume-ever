@@ -1,0 +1,108 @@
+/* #*/ export const PERSON_EN = `
+# Any fields left unchanged, please delete so your resume is fully yours!
+
+name:
+  first: Jean-François
+  middle:
+  last: Fraisse
+about: I would like help you with my plain frontend transversal aknowledge.
+
+position: Frontend sénior developper & Consultant
+
+birth:
+  year: 1982  
+  location: Clermont-Ferrand
+
+# you may add more experiences by duplicating the template
+
+experience:
+
+- company: EVIDENCEB
+  position: Frontend engineer
+  timeperiod: feb. 2021 – déc. 2021
+  description: Tech lead, frontend performance
+  descriptions: 
+  - content: Compatibilité "cross platform" (IOS & android),
+  - content: Optimisations webperf (debug fuites mémoires), 
+  - content: Mise en conformité au RGAA des interfaces,
+  - content: Présentation au CODIR,
+  - content: Angular, React   
+
+- company: Digiteka Freelance
+  position: Frontend engineer
+  timeperiod: oct. 2021 – nov. 2021
+  description: Audit technique et performance frontend
+  descriptions: 
+  - content: Webperf,
+  - content: Optimisation de l'usine de build webpack,
+  - content: Architecture du code et nettoyage,
+  - content: Vanilla JS, webpack
+
+- company: ENGIE
+  position: Tech lead frontend Angular
+  timeperiod: mai 2018 – août 2019
+  description: Accompagnement sur la stratégie frontend
+  descriptions: 
+  - content: Angular, schematics, i18n, OpenID Connect (OIDC), jekyll, ngx-charts, jest,
+  - content: Support de 3 langues (italien, français, anglais), 
+  - content: Tests unitaires, intégration, e2e,
+  - content: Création d'une bibliothèque de composants partagés Angular,
+  - content: Datavisualisations (d3.js),
+  - content: Intervention au Brésil et en France avec deux équipes de 5-10 personnes,
+  - content: SpringBoot, PHP, docker, jenkins et ansible
+
+- company: Octo Technology 
+  position: Consultant UX et dev frontend senior
+  timeperiod: septembre 2012 - mai 2015 
+  description: Facilitateur entre les devs et l'UX design
+  descriptions: 
+  - content: SAFRAN, Angular, Spring, Twitter bootstrap,
+  - content: Europcar, consulting responsive web design,
+  - content: Viadeo, tech leading et prise en charge des langues orientales,
+  - content: Finance Active, Tech lead front AngularJS,
+  - content: Danone, rétrocompatibilité IE6 
+
+
+education:
+- degree: Formation Bac+ 2 Ecole de Design Nantes Atlantique (septembre 2007 - juin 2008)
+  timeperiod:   
+  description: développement php web et design photoshop  
+
+# skill level goes from 0 to 100
+skills:
+- name: Tech leading
+- name: Méthodo agiles
+- name: Angular, Vue
+- name: Typescript, JavaScript, HTML5, CSS3
+- name: Node.js, PHP, JAVA
+- name: Cypress, protractor
+- name: Docker, Jenkins, Ansible
+knowledge: Webperf, architecture frontend
+
+projects:
+- name: CV Jean-François Fraisse
+  platform: Vue
+  timeperiod: February 2016
+  description: fork du travail talentueux de salomonelli:)
+  url: https://github.com/salomonelli/best-resume-ever
+
+# optional, not all resume templates have hobbies included
+hobbies:
+- name: dessin numérique
+  iconClass: fa fa-paint-brush
+
+contributions:
+- name: best-resume-ever
+  description: 👔 💼 Build fast 🚀 and easy multiple beautiful resumes.
+  url: https://github.com/salomonelli/best-resume-ever
+
+contact:
+  email: fraisse.jean.francois@gmail.com
+  phone: '0651132220'
+  street: 18eme quartier Marx Dormoy
+  city: Paris
+  website: ''
+  github: jffraisse
+# en, de, fr, pt, ca, cn, it, es, th, pt-br, ru, sv, id, hu, pl, ja, ka, nl, he, zh-tw, lt, ko, el, nb-no
+lang: fr
+`

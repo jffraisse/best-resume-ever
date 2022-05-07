@@ -1,18 +1,27 @@
 import yaml from 'js-yaml';
-import {
-    PERSON
-} from '../../resume/data.yml';
+import { PERSON_FR } from '../../resume/data_fr.yml';
+import { PERSON_EN } from '../../resume/data_en.yml';
 import {
     terms
 } from '../terms';
 
+const LANG_ENV = process.env.LANG;
 // Called by templates to decrease redundancy
 function getVueOptions (name) {
+    let profil_info;
+    
+    if (LANG_ENV == 'fr') {
+        profil_info = PERSON_FR;
+    } else {
+        profil_info = PERSON_EN;
+    }
+
+    
     const opt = {
         name: name,
         data () {
             return {
-                person: yaml.load(PERSON),
+                person: yaml.load(profil_info),
                 terms: terms,
             };
         },
