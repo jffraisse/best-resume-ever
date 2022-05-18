@@ -1,27 +1,19 @@
 import yaml from 'js-yaml';
-import { PERSON_FR } from '../../resume/data_fr.yml';
-import { PERSON_EN } from '../../resume/data_en.yml';
 import {
     terms
 } from '../terms';
+import { LangUtilities } from '../../src/lang/langUtilities';
 
-const LANG_ENV = process.env.LANG;
 // Called by templates to decrease redundancy
 function getVueOptions (name) {
-    let profil_info;
-    
-    if (LANG_ENV == 'fr') {
-        profil_info = PERSON_FR;
-    } else {
-        profil_info = PERSON_EN;
-    }
 
+    const profil_info = new LangUtilities();
     
     const opt = {
         name: name,
         data () {
             return {
-                person: yaml.load(profil_info),
+                person: yaml.load(profil_info.translateProfilInfo()),
                 terms: terms,
             };
         },
@@ -34,7 +26,6 @@ function getVueOptions (name) {
                 Object.keys(defaultLang)
                     .filter(k => !useLang[k])
                     .forEach(k => {
-                        console.log(k);
                         useLang[k] = defaultLang[k];
                     });
 
@@ -65,7 +56,6 @@ function getVueOptions (name) {
                 }
 
                 if(this.person.contact.phone) {
-                    console.log(this.person.contact.phone);
                     links.phone = `tel:${this.person.contact.phone}`;
                 }
 
@@ -75,6 +65,7 @@ function getVueOptions (name) {
     };
     return opt;
 }
+
 
 export {
     getVueOptions
