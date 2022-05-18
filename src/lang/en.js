@@ -1,9 +1,9 @@
 // English
 const lang = {
     contact: 'Contact',
-    born: 'Born',
+    born: 'Born in',
     bornIn: 'in',
-    experience: 'Experience',
+    experience: 'Experiences',
     education: 'Education',
     skills: 'Skills',
     projects: 'Projects',
