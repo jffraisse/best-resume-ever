@@ -4,6 +4,8 @@ const path = require('path');
 const http = require('http');
 const config = require('../config');
 
+const LANG_ENV = process.env.LANG;
+
 const {
     interval
 } = require('rxjs');
@@ -37,13 +39,7 @@ const waitForServerReachable = () => {
         filter(ok => !!ok)
     );
 };
-/*
-const timedOut = timeout => {
-    return new Promise(res => {
-        setTimeout(res, timeout);
-    });
-};
-*/
+
 const convert = async () => {
     await waitForServerReachable().pipe(
         first()
@@ -52,7 +48,8 @@ const convert = async () => {
     console.log('Connected to server ...');
     console.log('Exporting ...');
     try {
-        const fullDirectoryPath = path.join(__dirname, '../pdf/');
+        console.log(LANG_ENV);
+        const fullDirectoryPath = path.join(__dirname, `../pdf/`);
         const directories = getResumesFromDirectories();
         directories.forEach(async (dir) => {
             const browser = await puppeteer.launch({
