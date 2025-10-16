@@ -1,7 +1,8 @@
 import { PERSON_FR } from '../../resume/data_fr.yml';
 import { PERSON_EN } from '../../resume/data_en.yml';
 
-const LANG_ENV = process.env.LANG;
+// fix language env
+const LANG_ENV = 'FR';
 const languageList = {
     'FR': PERSON_FR,
     'EN': PERSON_EN

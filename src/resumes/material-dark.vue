@@ -107,7 +107,8 @@
     <div class="title">
       <h2>{{person.name.first}} {{person.name.middle}} {{person.name.last}}</h2>
       <div class="description">{{person.position}}</div>
-      <span class="about">{{person.about}}</span>
+      <span class="about-description" v-for="description in person.name.aboutDescriptions">{{description.content}}</span>
+      <span class="about">{{person.name.about}}</span>
     </div>
 
     <div class="section-headline experience">{{ lang.experience }}</div>
@@ -297,8 +298,15 @@ h4 {
     display: block;
     margin-top:8px !important;
     font-weight:375;
-    font-size: 16px;
+    font-size: 14px;
     color:rgba(0,0,0,0.541176);
+  }
+  .about-description {
+      display: block;
+      margin-top:5px !important;
+      font-weight:375;
+      font-size: 14px;
+      color:rgba(0,0,0,0.541176);
   }
   .block {
     width:90%;

@@ -5,7 +5,10 @@ name:
   first: Jean-François
   middle:
   last: Fraisse
-about: Fort d'une expérience solide avec des missions stratégiques, j'aide les entreprises à mettre en place leur stratégie web.
+  about: Je suis intervenu en startup, finance, bancaire, mais aussi sur divers sujets techniques comme l'internationalisation, la marque blanche, l'accessibilité, les performances web et la cross-compatibility.
+  aboutDescriptions:
+  - content: Angular, Vue.js et les interfaces cross-platform sont mes terrains de jeux techniques favoris,
+  - content: En solide partenariat avec les PO j’aide le produit à répondre aux exigences et éventuels blocages métiers/fonctionnels.
 
 position: Consultant et développeur frontend senior
 
@@ -17,6 +20,15 @@ birth:
 
 experience:
 
+- company: Invivo
+  position: Lead frontend
+  timeperiod: juin 2023 – janv. 2024
+  description: Socle technique et architecture frontend
+  descriptions: 
+  - content: Refactoring d'une webapp existante en marque blanche,
+  - content: Mise en place d'une architecture frontend moderne,
+  - content: Vue.js, Typescript, 
+
 - company: EVIDENCEB
   position: Consultant frontend
   timeperiod: fev. 2021 – janv. 2022
@@ -26,17 +38,7 @@ experience:
   - content: Optimisations webperf (debug fuites mémoires), 
   - content: Mise en conformité au RGAA des interfaces,
   - content: Présentation au CODIR,
-  - content: Angular, React   
-
-- company: Digiteka Freelance
-  position: Consultant frontend
-  timeperiod: oct. 2021 – nov. 2021
-  description: Audit technique et performance frontend
-  descriptions: 
-  - content: Webperf,
-  - content: Optimisation de l'usine de build webpack,
-  - content: Architecture du code et nettoyage,
-  - content: Vanilla JS, webpack
+  - content: Angular
 
 - company: ENGIE
   position: Tech lead frontend Angular
@@ -50,6 +52,27 @@ experience:
   - content: Datavisualisations (d3.js),
   - content: Intervention au Brésil et en France avec deux équipes de 5-10 personnes,
   - content: SpringBoot, PHP, docker, jenkins et ansible
+
+- company: Freelance.com
+  position: Consultant frontend
+  timeperiod: janv. 2017 – mai 2018
+  description: Tech lead frontend Angular
+  descriptions: 
+  - content: Design et développement de composants Angular,
+  - content: Mise en place de Jenkins et automatisation des tests unitaires,
+  - content: Tests end2end (protractor),
+  - content: Services cloud (Firebase, Keen, Hotjar, sentry.io, userback),
+  - content: Angular   
+
+- company: Finance Active
+  position: Consultant frontend
+  timeperiod: janv. 2017 – mai 2018
+  description: Tech lead frontend Angular
+  descriptions: 
+  - content: Cadrage et atelier sur les frameworks js Ember 2, Angular et Backbone,
+  - content: Utilisation early stage d'Angular 2 version alpha jusqu'à la version 4,
+  - content: UDD Angular(4) (Webpack, Typescript, Jasmine, Karma, nodeJs),
+  - content: Intégration de librairies tierces à l'industrie zone.js Angular2 (Highcharts, Zurb Foundation, CkEditor),
 
 - company: Octo Technology 
   position: Consultant UX et dev frontend senior
@@ -70,20 +93,17 @@ education:
 
 # skill level goes from 0 to 100
 skills:
-- name: Tech leading
-- name: Méthodo agiles
 - name: Angular, Vue
-- name: Typescript, JavaScript, HTML5, CSS3
+- name: Typescript, JavaScript, HTML5, tailwind, CSS3
 - name: Node.js, PHP, JAVA
-- name: Cypress, protractor
-- name: Docker, Jenkins, Ansible
-knowledge: Webperf, architecture frontend
+- name: Cypress, Playwright
+knowledge: Docker, Ansible
 
 projects:
 - name: CV Jean-François Fraisse
   platform: Vue
-  timeperiod: February 2016
-  description: fork du travail talentueux de salomonelli:)
+  timeperiod: Octobre 2025
+  description: fork musclé du travail talentueux de salomonelli
   url: https://github.com/salomonelli/best-resume-ever
 
 # optional, not all resume templates have hobbies included

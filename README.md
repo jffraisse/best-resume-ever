@@ -61,15 +61,65 @@
 <br>
 <br>
 
-## Prerequisite
+## Prerequisites
 
-1. It is required to have Node.js with version 8.5.0 or higher. To see what version of Node.js is installed on your machine type the following command in the terminal:
+### Node.js and npm Requirements
 
-```
+This project requires:
+- **Node.js**: version 10.11.0 (as specified in package.json dependencies)
+- **npm**: version 5.0.0 or higher (comes with Node.js)
+
+To check your current versions:
+```bash
 node -v
+npm -v
 ```
 
-2. If you do not have installed Node.js in your machine then go to [this link](https://nodejs.org/en/download/) in order to install node.
+### Installation Recommendations
+
+#### Option 1: Using nvm (Recommended)
+We strongly recommend using [nvm (Node Version Manager)](https://github.com/nvm-sh/nvm) to manage Node.js versions:
+
+1. **Install nvm** (if not already installed):
+   ```bash
+   # On macOS/Linux
+   curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh | bash
+   
+   # Or using Homebrew on macOS
+   brew install nvm
+   ```
+
+2. **Install and use Node.js 10.11.0**:
+   ```bash
+   # Install Node.js 10.11.0 (required version)
+   nvm install 10.11.0
+   nvm use 10.11.0
+   ```
+
+3. **Verify installation**:
+   ```bash
+   node -v  # Should show v10.11.0
+   npm -v   # Should show compatible npm version (6.x.x)
+   ```
+
+#### Option 2: Direct Installation
+If you prefer not to use nvm, download Node.js directly from [nodejs.org](https://nodejs.org/en/download/).
+
+### Troubleshooting Version Issues
+
+If you encounter npm compatibility errors like:
+```
+ERROR: npm v9.5.1 is known not to run on Node.js v10.11.0
+```
+
+**Solution**: Use the correct Node.js version:
+```bash
+# With nvm - use the required version
+nvm use 10.11.0
+
+# If you have npm v9.x.x, downgrade to a compatible version
+npm install -g npm@6.14.17
+```
 
 ## How to use
 
